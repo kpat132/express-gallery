@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  border: 1px solid purple;
+  color: rgba(39, 37, 37, 0.651);
+  background-color: white;
+  clear: left;
+  justify-content: flex-start; }
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 1000px;
+  border: 1px solid red;
+  justify-content: center;
+  margin: auto; }
+  .container .smallerContainer {
+    display: flex;
+    border: 50px;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 1px solid blue;
+    justify-content: space-between; }
+    .container .smallerContainer .evenSmallerContainer {
+      border: 1px solid green;
+      display: flex;
+      width: 900px;
+      height: 540px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end; }

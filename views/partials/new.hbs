@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <h1>New Photo</h1>
+</head>
+<body>
+  <form action="/gallery" method="POST" enctype="application/x-www-form-urlencoded">
+
+  <label for="POST-author">Author: </label>
+  <input id="POST-author" type="text" name="author">
+
+  <label for="POST-link">Upload a photo! (URL only pls): </label>
+  <input id="POST-link" type="text" name="link">
+
+  <label for="POST-description">Description: </label>
+  <input id="POST-description" type="text" name="description">
+
+  <input type="submit" value="submit">
+  </form>
+  
+</body>
+</html>

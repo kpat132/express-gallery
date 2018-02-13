@@ -1,0 +1,21 @@
+<header>
+  <h1>_Architekt</h1>
+</header>
+<div class="container">
+
+  <div class='smallerContainer'>
+    <img src='http://via.placeholder.com/870x360'>
+    <div class='evenSmallerContainer'>
+      {{#each pro}}
+      <div class="photo">
+        <img src={{link}}>
+        <p>Author: {{author}}</p>
+        <p>Description: {{description}}
+        <a href='http://localhost:3000/gallery/{{id}}'>Click For More!</a>
+        </p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+</div>

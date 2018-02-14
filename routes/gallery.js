@@ -3,6 +3,7 @@ const router = express.Router();
 const knex = require(`../db/knex.js`);
 
 const Photo = require('../db/models/Photo')
+const {isAuthenticated} = require(`../utils/helpers`);
 
 router.get('/new', (req, res) => {
   return res.render('partials/new');
@@ -79,12 +80,15 @@ router.get('/:id/edit', (req, res) => {
 
 router.route(`/`)
 
-  .post((req, res) => {
+  .post( isAuthenticated, (req, res) => {
     //requested information
-    let { author, link, description } = req.body;
+    let data = { author, link, description } = req.body;
+
+    data.user_id = req.user.id;
+    console.log(req.user.id);
 
     //Create an instance of the class Photo
-    return new Photo({ author, link, description })
+    return new Photo(data)
       .save()
       .then(result => {
         //console.log(result);
